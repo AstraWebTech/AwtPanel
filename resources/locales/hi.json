@@ -1,0 +1,98 @@
+{
+  "undefined": "अपरिभाषित",
+  "pages": {
+    "main": "मुख्य",
+    "forms": "फॉर्म",
+    "settings": "सेटिंग्स",
+    "websites": "वेबसाइटें",
+    "servers": "सर्वर",
+    "databases": "डेटाबेस",
+    "git": "GIT",
+    "add_website": "वेबसाइट जोड़ें",
+    "add_server": "सर्वर जोड़ें",
+    "add_database": "डेटाबेस जोड़ें",
+    "add_git": "GIT जोड़ें",
+    "profile_settings": "प्रोफ़ाइल सेटिंग्स",
+    "about_app": "ऐप के बारे में",
+    "website_details": "वेबसाइट का विवरण"
+  },
+  "parameters": {
+    "name": "नाम",
+    "url": "यूआरएल",
+    "server": "सर्वर",
+    "database": "डेटाबेस",
+    "root_directory": "रूट डायरेक्टरी",
+    "user": "उपयोगकर्ता",
+    "type": "प्रकार",
+    "type_database": "डेटाबेस प्रकार",
+    "host": "होस्ट",
+    "ipv4": "IPv4",
+    "git": "GIT",
+    "img": "छवि",
+    "file": "फ़ाइल",
+    "password": "पासवर्ड",
+    "confirm_password": "पासवर्ड की पुष्टि करें",
+    "token": "टोकन",
+    "login": "लॉगिन करें"
+  },
+  "placeholders": {
+    "enter": {
+      "id": "आईडी दर्ज करें",
+      "name": "नाम दर्ज करें",
+      "url": "यूआरएल दर्ज करें",
+      "user": "उपयोगकर्ता दर्ज करें",
+      "password": "पासवर्ड दर्ज करें",
+      "confirm_password": "पासवर्ड की पुष्टि करें",
+      "root_directory": "रूट डायरेक्टरी दर्ज करें",
+      "token": "टोकन दर्ज करें"
+    },
+    "select": {
+      "name": "नाम चुनें",
+      "url": "यूआरएल चुनें",
+      "server": "सर्वर चुनें",
+      "database": "डेटाबेस चुनें",
+      "type_database": "डेटाबेस प्रकार चुनें",
+      "git": "GIT चुनें",
+      "file": "फ़ाइल चुनें"
+    }
+  },
+  "functional_phrases": {
+    "add": "जोड़ें",
+    "search": "खोजें...",
+    "add_record": "रिकॉर्ड जोड़ें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "show_by": "दिखाएं",
+    "open_website": "वेबसाइट खोलें",
+    "get_db_dump": "डेटाबेस बैकअप प्राप्त करें",
+    "edit_server": "सर्वर संपादित करें",
+    "edit_database": "डेटाबेस संपादित करें",
+    "edit_git": "GIT संपादित करें",
+    "enter": "लॉग इन करें",
+    "exit": "लॉग आउट करें"
+  },
+  "subtitles": {
+    "authorization": "ऑथराइज़ेशन",
+    "add_site": "साइट जोड़ें",
+    "add_server": "सर्वर जोड़ें",
+    "add_database": "डेटाबेस जोड़ें",
+    "add_git": "GIT जोड़ें",
+    "app_theme": "ऐप थीम",
+    "language": "भाषा",
+    "login": "लॉगिन",
+    "registration": "रजिस्ट्रेशन"
+  },
+  "messages": {
+    "error": {
+      "load_data": "डेटा लोड करते समय त्रुटि",
+      "required": "फ़ील्ड खाली नहीं हो सकता",
+      "password_length": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
+      "password_format": "कम से कम एक छोटा और बड़ा अक्षर, एक अंक और एक विशेष चरित्र (@$!%*?&-.) होना चाहिए।",
+      "passwords_not_match": "पासवर्ड मेल नहीं खाते"
+    }
+  },
+  "misc_words": {
+    "button": "बटन",
+    "link": "लिंक"
+  }
+}

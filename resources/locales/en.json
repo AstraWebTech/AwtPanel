@@ -1,0 +1,101 @@
+{
+  "undefined": "Undefined",
+  "pages": {
+    "main": "Main",
+    "forms": "Forms",
+    "settings": "Settings",
+    "websites": "Websites",
+    "servers": "Servers",
+    "databases": "Databases",
+    "git": "GIT",
+    "add_website": "Add Website",
+    "add_server": "Add Server",
+    "add_database": "Add Database",
+    "add_git": "Add GIT",
+    "add_user": "Add User",
+    "profile_settings": "Profile Settings",
+    "about_app": "About App",
+    "website_details": "Website Details",
+    "users": "Users"
+  },
+  "parameters": {
+    "name": "Name",
+    "url": "URL",
+    "server": "Server",
+    "database": "Database",
+    "root_directory": "Root Directory",
+    "user": "User",
+    "type": "Type",
+    "type_database": "Database Type",
+    "host": "Host",
+    "ipv4": "IPv4",
+    "git": "GIT",
+    "img": "Image",
+    "file": "File",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "token": "Token",
+    "login": "Login"
+  },
+  "placeholders": {
+    "enter": {
+      "id": "Enter ID",
+      "name": "Enter Name",
+      "url": "Enter URL",
+      "user": "Enter User",
+      "password": "Enter Password",
+      "confirm_password": "Confirm Password",
+      "root_directory": "Enter Root Directory",
+      "token": "Enter Token"
+    },
+    "select": {
+      "name": "Select Name",
+      "url": "Select URL",
+      "server": "Select Server",
+      "database": "Select Database",
+      "type_database": "Select Database Type",
+      "git": "Select GIT",
+      "file": "Select File"
+    }
+  },
+  "functional_phrases": {
+    "add": "Add",
+    "search": "Search...",
+    "add_record": "Add Record",
+    "delete": "Delete",
+    "edit": "Edit",
+    "show_by": "Show by",
+    "open_website": "Open Website",
+    "get_db_dump": "Get DB Dump",
+    "edit_server": "Edit Server",
+    "edit_database": "Edit Database",
+    "edit_git": "Edit GIT",
+    "enter": "Log In",
+    "exit": "Log Out"
+  },
+  "subtitles": {
+    "authorization": "Authorization",
+    "add_site": "Add Site",
+    "add_server": "Add Server",
+    "add_database": "Add Database",
+    "add_git": "Add GIT",
+    "add_user": "Add User",
+    "app_theme": "App Theme",
+    "language": "Language",
+    "login": "Login",
+    "registration": "Registration"
+  },
+  "messages": {
+    "error": {
+      "load_data": "Error loading data",
+      "required": "Field cannot be empty",
+      "password_length": "Password must be at least 8 characters long",
+      "password_format": "Must include at least one lowercase and uppercase letter, one digit, and one special character from @$!%*?&-.",
+      "passwords_not_match": "Passwords do not match"
+    }
+  },
+  "misc_words": {
+    "button": "Button",
+    "link": "Link"
+  }
+}

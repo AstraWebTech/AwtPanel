@@ -1,0 +1,85 @@
+:root{
+    --color-accent-critical: #e36563;
+    --color-accent-main-a: #357de1;
+    --color-accent-main-b: #3466ad;
+    --color-accent-notice: #e67046;
+    --color-accent-success: #1c9c75;
+    --color-accent-warning: #ffb72c;
+
+    --shadow-small-default: 0px 1px 4px 1px rgba(36, 36, 36, 0.07);
+    --shadow-small-hovered: 0px 1px 16px 2px rgba(36, 36, 36, 0.07);
+    --shadow-small-pressed: 0px 0px 6px rgba(36, 36, 36, 0.07);
+    --shadow-small-hidden: 0px 1px 4px 1px rgba(36, 36, 36, 0);
+    --shadow-medium-hovered: 0px 2px 32px 6px rgba(36, 36, 36, 0.07);
+    --shadow-medium-pressed: 0px 1px 8px rgba(36, 36, 36, 0.07);
+    --shadow-medium-hidden: 0px 1px 12px 2px rgba(36, 36, 36, 0);
+    --shadow-huge-default: 0px 2px 160px 16px rgba(36, 36, 36, 0.07);
+    --shadow-huge-hidden: 0px 2px 160px 16px rgba(36, 36, 36, 0);
+}
+.theme-light{
+    --color-accent-neutral: #262626;
+    --color-accent-neutral-hover: #000000;
+    --color-background-alternate: #f5f5f5;
+    --color-background-default: #ffffff;
+    --color-background-glassy-a: rgba(0, 0, 0, 0.06);
+    --color-background-glassy-b: rgba(0, 0, 0, 0.12);
+    --color-background-glassy-c: rgba(0, 0, 0, 0.25);
+    --color-background-highlighted: #edf1f8;
+    --color-background-overlay: rgba(0, 0, 0, 0.5);
+    --color-background-stroke: #e0e0e0;
+    --color-content-inverted-primary: #ffffff;
+    --color-content-inverted-secondary: rgba(255, 255, 255, 0.5);
+    --color-content-primary: rgba(0, 0, 0, 0.85);
+    --color-content-secondary: rgba(0, 0, 0, 0.5);
+    --color-content-tertiary: rgba(0, 0, 0, 0.25);
+
+    --shadow-medium-default: 0px 1px 12px 2px rgba(36, 36, 36, 0.07);
+}
+.theme-dark{
+    --color-accent-neutral: #ffffff;
+    --color-accent-neutral-hover: #bfbfbf;
+    --color-background-alternate: #1b1b1e;
+    --color-background-default: #202124;
+    --color-background-glassy-a: rgba(255, 255, 255, 0.06);
+    --color-background-glassy-b: rgba(255, 255, 255, 0.12);
+    --color-background-glassy-c: rgba(255, 255, 255, 0.25);
+    --color-background-highlighted: #404959;
+    --color-background-overlay: rgba(0, 0, 0, 0.85);
+    --color-background-stroke: #2e2e2e;
+    --color-content-inverted-primary: rgba(0, 0, 0, 0.85);
+    --color-content-inverted-secondary: rgba(0, 0, 0, 0.5);
+    --color-content-primary: #f7f7f7;
+    --color-content-secondary: rgba(255, 255, 255, 0.5);
+    --color-content-tertiary: rgba(255, 255, 255, 0.25);
+
+    --shadow-medium-default: 0px 4px 16px rgba(0, 0, 0, 0.24);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+div#app {
+    display: flex;
+    min-height: 100vh;
+    flex: 1 1 auto;
+}
+.container{
+    padding: 0 20px;
+    margin: 0 auto;
+}
+a{
+    color: var(--color-accent-main-a);
+    text-decoration: none;
+
+}
+.formAlert{
+    background: var(--color-background-glassy-a);
+    border: 2px solid var(--color-accent-warning);
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
