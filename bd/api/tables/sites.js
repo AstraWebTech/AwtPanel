@@ -24,7 +24,6 @@ const getList = (filters, sort, search, from, size, enrich = false) => {
                 (SELECT servers.host FROM servers WHERE s.server_id = servers.id) AS server_host
             FROM sites s
                      LEFT JOIN site_groups sg ON s.id = sg.site_id
-            GROUP BY s.id
         `;
 
         let conditions = [];
@@ -49,10 +48,11 @@ const getList = (filters, sort, search, from, size, enrich = false) => {
             query += " WHERE " + conditions.join(" AND ");
         }
 
+        query += ` GROUP BY s.id`
+
         if (sort) {
             query += ` ORDER BY ${sort.column} ${sort.order === "desc" ? "DESC" : "ASC"}`;
         }
-
 
         db.all(query, params, async (err, countResult) => {
             if (err) return reject(err);

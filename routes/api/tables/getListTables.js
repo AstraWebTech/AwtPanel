@@ -8,7 +8,8 @@ const getListTables = {
     groups: require("../../../bd/api/tables/groups").getList,
     servers: require("../../../bd/api/tables/servers").getList,
     site_groups: require("../../../bd/api/tables/site_groups").getList,
-    sites: require("../../../bd/api/tables/sites").getList
+    sites: require("../../../bd/api/tables/sites").getList,
+    users: require("../../../bd/api/tables/users").getList
 };
 
 /**

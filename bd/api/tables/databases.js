@@ -117,10 +117,10 @@ const getElement = (id, enrich = false) => {
  */
 const createElement = (data) => {
     return new Promise((resolve, reject) => {
-        const { name, host, user, password, server_id, type_id } = data;
+        const { name, user, password, server_id, type_id } = data;
 
-        if (!name || !host || !user || !password || !type_id) {
-            return reject(new Error("Поля 'name', 'host', 'user', 'password' и 'type_id' обязательны."));
+        if (!name || !server_id || !user || !password || !type_id) {
+            return reject(new Error("Поля 'name', 'server_id', 'user', 'password' и 'type_id' обязательны."));
         }
 
         db.get("SELECT id FROM databases WHERE name = ?", [name], (err, row) => {
@@ -128,9 +128,9 @@ const createElement = (data) => {
             if (row) return reject(new Error(`Запись с именем "${name}" уже существует.`));
 
             const query = `INSERT INTO databases (name, host, user, password, server_id, type_id) VALUES (?, ?, ?, ?, ?, ?)`;
-            db.run(query, [name, host, user, password, server_id, type_id], function (err) {
+            db.run(query, [name, user, password, server_id, type_id], function (err) {
                 if (err) return reject(err);
-                resolve({ id: this.lastID, name, host, user, type_id });
+                resolve({ id: this.lastID, name, user, type_id });
             });
         });
     });

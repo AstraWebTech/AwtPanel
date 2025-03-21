@@ -9,6 +9,7 @@ const createElementTables = {
     servers: require("../../../bd/api/tables/servers").createElement,
     site_groups: require("../../../bd/api/tables/site_groups").createElement,
     sites: require("../../../bd/api/tables/sites").createElement,
+    users: require("../../../bd/api/tables/users").createElement,
 };
 
 /**

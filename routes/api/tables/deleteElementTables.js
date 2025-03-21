@@ -9,6 +9,7 @@ const deleteElementTables = {
     servers: require("../../../bd/api/tables/servers").deleteElement,
     site_groups: require("../../../bd/api/tables/site_groups").deleteElement,
     sites: require("../../../bd/api/tables/sites").deleteElement,
+    users: require("../../../bd/api/tables/users").deleteElement,
 };
 
 /**

@@ -1,6 +1,8 @@
 const db = require("./index");
+const {hash} = require("bcrypt");
+require('dotenv').config();
 
-db.serialize(() => {
+db.serialize( () => {
     db.run("PRAGMA foreign_keys = ON;");
 
     db.run(`CREATE TABLE IF NOT EXISTS groups (
@@ -62,6 +64,14 @@ db.serialize(() => {
         FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE
     );`);
 
+    db.run(`CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        login TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL,
+        language TEXT NOT NULL DEFAULT 'en',
+        theme TEXT NOT NULL DEFAULT 'theme-light'
+    );`);
+
     console.log("✅  Структура SQLite создана.");
 
     const insertData = [
@@ -87,7 +97,7 @@ db.serialize(() => {
             ('Redis', 'redis');
         `,
 
-        `INSERT INTO databases (name, host, user, password, server_id, type_id) VALUES
+        `INSERT INTO databases (name, user, password, server_id, type_id) VALUES
             ('DB1', 'root', 'rootpass', 1, 1),
             ('DB2', 'postgres', 'pgpass', 2, 2),
             ('DB3', 'mongo', 'mongopass', 3, 3),
@@ -118,6 +128,71 @@ db.serialize(() => {
     ];
     insertData.forEach(query => db.run(query));
     console.log("✅  Данные SQLite заполнены.");
+
+    (async () => {
+        db.serialize();
+        try {
+            const adminLogin = process.env.ADMIN_LOGIN || "root";
+            const adminPassword = process.env.ADMIN_PASSWORD || "root";
+
+            const hashedPassword = await new Promise((resolve, reject) => {
+                hash(adminPassword, 10, (err, hashedPassword) => {
+                    if (err) {
+                        console.error('Error hashing admin password:', err);
+                        return reject(err);
+                    }
+                    resolve(hashedPassword);
+                });
+            });
+
+            const adminExists = await new Promise((resolve, reject) => {
+                db.get("SELECT id FROM users WHERE login = ?", [adminLogin], (err, row) => {
+                    if (err) {
+                        console.error('Error checking admin existence:', err);
+                        return reject(err);
+                    }
+                    resolve(row);
+                });
+            });
+
+            if (!adminExists) {
+                await new Promise((resolve, reject) => {
+                    db.run(`INSERT INTO users (login, password, language, theme) VALUES (?, ?, ?, ?)`,
+                        [adminLogin, hashedPassword, 'en', 'theme-light'],
+                        function(err) {
+                            if (err) {
+                                console.error('Error inserting admin:', err);
+                                return reject(err);
+                            }
+                            console.log('✅  Администратор успешно добавлен');
+                            resolve();
+                        });
+                });
+            } else {
+                console.log('Администратор уже есть');
+            }
+        } catch (err) {
+            console.error('Error initializing database:', err);
+        } finally {
+            db.close((err) => {
+                if (err) {
+                    console.error('Error closing database:', err);
+                } else {
+                    console.log('✅  База данных успешно закрыта.');
+                }
+            });
+        }
+    })();
 });
 
-db.close();
+
+
+
+
+
+
+
+
+
+
+
