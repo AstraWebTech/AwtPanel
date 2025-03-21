@@ -43,5 +43,14 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px 20px;
+  text-align: center;
+}
+option {
+  text-align: left;
+}
 </style>

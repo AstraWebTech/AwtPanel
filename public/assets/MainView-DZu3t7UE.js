@@ -1,0 +1,1 @@
+import o from"./SitesView-CwNK9Z6l.js";import{h as r,o as t}from"./index-D95doIy-.js";import"./useVueListData-Bs8iCMEX.js";import"./PreLoader-BfunhHIS.js";const n={__name:"MainView",setup(e){return(a,_)=>(t(),r(o))}};export{n as default};

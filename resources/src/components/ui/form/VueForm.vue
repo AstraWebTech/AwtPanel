@@ -165,7 +165,6 @@ form{
   border: 3px solid currentColor;
   padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
   color: currentColor;
-  background: transparent;
   border-radius: var(--size-radius);
 }
 .awtSelect select:focus{

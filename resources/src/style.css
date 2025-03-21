@@ -74,8 +74,18 @@ div#app {
 a{
     color: var(--color-accent-main-a);
     text-decoration: none;
-
 }
+
+select{
+    background-color: var(--color-background-alternate);
+    color: var(--color-accent-neutral);
+    border: 1px solid var(--color-background-stroke);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    box-shadow: var(--shadow-medium-default);
+}
+
 .formAlert{
     background: var(--color-background-glassy-a);
     border: 2px solid var(--color-accent-warning);
