@@ -78,7 +78,7 @@ const getDumpBd = () => {
           <span>{{ detailItem.server.name }}</span>
         </div>
         <div class="option" v-if="detailItem.server.login">
-          <b>{{ t('parameters.ipv4') }}: </b>
+          <b>{{ t('parameters.user') }}: </b>
           <span>{{ detailItem.server.login }}</span>
         </div>
         <div class="option" v-if="detailItem.server.host">

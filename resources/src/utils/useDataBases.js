@@ -34,7 +34,7 @@ export function useDataBases(){
                     name: item.name,
                     type: item.type.name,
                     user: item.user,
-                    host: item.host,
+                    host: item.server.host,
                 }
             })
         }

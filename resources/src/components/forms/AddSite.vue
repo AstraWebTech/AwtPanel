@@ -75,9 +75,7 @@ const submit = () => {
 <template>
   <div class="container">
     <h2>{{ t('subtitles.add_site') }}</h2>
-    <div class="alert">
-      Добавить сайт вы сможете если у вас добавлен <b>Сервер</b>, <b>GIT</b>, <b>База данных</b>.
-    </div>
+    <div class="formAlert">Добавить сайт вы сможете если у вас добавлен <b>Сервер</b>, <b>GIT</b>, <b>База данных</b>.</div>
     <VueForm :fields="fields" :isLoading="isLoading" :errorMessage="errorMessage" :showOkMessage="showOkMessage" @submit="submit" :buttonLabel="t('functional_phrases.add')"/>
   </div>
 </template>
