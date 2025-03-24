@@ -127,7 +127,7 @@ const createElement = (data) => {
             if (err) return reject(err);
             if (row) return reject(new Error(`Запись с именем "${name}" уже существует.`));
 
-            const query = `INSERT INTO databases (name, host, user, password, server_id, type_id) VALUES (?, ?, ?, ?, ?, ?)`;
+            const query = `INSERT INTO databases (name, user, password, server_id, type_id) VALUES (?, ?, ?, ?, ?)`;
             db.run(query, [name, user, password, server_id, type_id], function (err) {
                 if (err) return reject(err);
                 resolve({ id: this.lastID, name, user, type_id });
